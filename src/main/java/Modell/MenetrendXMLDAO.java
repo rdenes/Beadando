@@ -50,7 +50,7 @@ public class MenetrendXMLDAO {
                 }
             }
           }
-        System.out.println(keses);
+        //System.out.println(keses);
         List<Menetrend> re = new ArrayList<>();
             String at1 = "";
             String at2 = "";
@@ -101,7 +101,7 @@ public class MenetrendXMLDAO {
                 if(i==0&&at4!="") {tmp_o4=at4;at4="";}
                 int vmi; 
                 vmi = Integer.parseInt(tmp4[i])+keses;
-                System.out.println(vmi);
+                //System.out.println(vmi);
                 if (vmi>59){
                     at4=at4+" "+(vmi-60);
                 }else{
@@ -134,7 +134,7 @@ public class MenetrendXMLDAO {
                     Element e = (Element) n;
                     //System.out.println(e.getElementsByTagName("Munkanap").item(0).getTextContent());
                     if(e.getTextContent().trim().equals(megallo)){
-                        System.out.println("be");
+                        //System.out.println("be");
                         if(!ll.contains(Integer.parseInt(eElement.getAttribute("szam"))))
                             ll.add(Integer.parseInt(eElement.getAttribute("szam")));
                     }

@@ -81,7 +81,7 @@ public class FXMLController implements Initializable {
        for(Integer e :ll){
                 ob.add(e);
        }
-       System.out.println(ob.get(0));
+       //System.out.println(ob.get(0));
        Megallok_B.setItems(ob);
        Megallok_B.setValue(ob.get(0));
        
@@ -136,7 +136,7 @@ public class FXMLController implements Initializable {
             for(String s :megallok){
                 ob2.add(s.trim());
             }
-            System.out.println(ob2.get(0));
+            //System.out.println(ob2.get(0));
             Megallok_M.setItems(ob2);
             Megallok_M.setValue(ob2.get(0));
             
