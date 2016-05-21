@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: ModellTest.MenetrendXMLDAOTest
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.164 sec - in ModellTest.MenetrendXMLDAOTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.295 sec - in ModellTest.MenetrendXMLDAOTest
