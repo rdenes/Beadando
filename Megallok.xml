@@ -10,6 +10,18 @@
         <megallo ID="valami3" menetido="9">
             Megallo3
         </megallo>
+        <megallo ID="valami4" menetido="12">
+            Megallo4
+        </megallo>
+        <megallo ID="valami5" menetido="15">
+            Megallo5
+        </megallo>
+        <megallo ID="valami6" menetido="18">
+            Megallo6
+        </megallo>
+        <megallo ID="valami7" menetido="21">
+            Megallo7
+        </megallo>
     </buszszam>
     <buszszam szam="19">
         <megallo ID="valami19" menetido="30">

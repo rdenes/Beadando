@@ -111,6 +111,7 @@ public class MenetrendXMLDAO {
             }
             re.add(new Menetrend(e.getOra(),tmp_o1.trim(),tmp_o2.trim(),tmp_o3.trim(),tmp_o4.trim()));
         }
+        if (at1!=""||at2!=""||at3!=""||at4!="") re.add(new Menetrend(re.get(re.size()-1).getOra()+1,at1,at2,at3,at4));
         return re;
     }
     

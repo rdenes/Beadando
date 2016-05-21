@@ -2,22 +2,70 @@
 <Menetrend>
     <buszszam szam="18">
         <ora ora="0">
-            <Munkanap>55 57</Munkanap>
-            <Tanszunet>55 57</Tanszunet>
-            <Szabadnap>55 57</Szabadnap>
-            <Munkaszunet>55 57</Munkaszunet>
+            <Munkanap>0 15 30 45</Munkanap>
+            <Tanszunet>0 30</Tanszunet>
+            <Szabadnap>0 30</Szabadnap>
+            <Munkaszunet>0 30</Munkaszunet>
         </ora>
         <ora ora="1">
-            <Munkanap>1</Munkanap>
-            <Tanszunet>1</Tanszunet>
-            <Szabadnap>1</Szabadnap>
-            <Munkaszunet>1</Munkaszunet>
+            <Munkanap>0 15 30 45</Munkanap>
+            <Tanszunet>0 30</Tanszunet>
+            <Szabadnap>0 30</Szabadnap>
+            <Munkaszunet>0 30</Munkaszunet>
         </ora>
         <ora ora="2">
-            <Munkanap>1</Munkanap>
-            <Tanszunet>1</Tanszunet>
-            <Szabadnap>1</Szabadnap>
-            <Munkaszunet>1</Munkaszunet>
+            <Munkanap>0 15 30 45</Munkanap>
+            <Tanszunet>0 30</Tanszunet>
+            <Szabadnap>0 30</Szabadnap>
+            <Munkaszunet>0 30</Munkaszunet>
+        </ora>
+        <ora ora="3">
+            <Munkanap>0 15 30 45</Munkanap>
+            <Tanszunet>0 30</Tanszunet>
+            <Szabadnap>0 30</Szabadnap>
+            <Munkaszunet>0 30</Munkaszunet>
+        </ora>
+        <ora ora="4">
+            <Munkanap>0 15 30 45</Munkanap>
+            <Tanszunet>0 30</Tanszunet>
+            <Szabadnap>0 30</Szabadnap>
+            <Munkaszunet>0 30</Munkaszunet>
+        </ora>
+        <ora ora="5">
+            <Munkanap>0 15 30 45</Munkanap>
+            <Tanszunet>0 30</Tanszunet>
+            <Szabadnap>0 30</Szabadnap>
+            <Munkaszunet>0 30</Munkaszunet>
+        </ora>
+        <ora ora="6">
+            <Munkanap>0 15 30 45</Munkanap>
+            <Tanszunet>0 30</Tanszunet>
+            <Szabadnap>0 30</Szabadnap>
+            <Munkaszunet>0 30</Munkaszunet>
+        </ora>
+        <ora ora="7">
+            <Munkanap>0 15 30 45</Munkanap>
+            <Tanszunet>0 30</Tanszunet>
+            <Szabadnap>0 30</Szabadnap>
+            <Munkaszunet>0 30</Munkaszunet>
+        </ora>
+        <ora ora="8">
+            <Munkanap>0 15 30 45</Munkanap>
+            <Tanszunet>0 30</Tanszunet>
+            <Szabadnap>0 30</Szabadnap>
+            <Munkaszunet>0 30</Munkaszunet>
+        </ora>
+        <ora ora="9">
+            <Munkanap>0 15 30 45</Munkanap>
+            <Tanszunet>0 30</Tanszunet>
+            <Szabadnap>0 30</Szabadnap>
+            <Munkaszunet>0 30</Munkaszunet>
+        </ora>
+        <ora ora="10">
+            <Munkanap>0 15 30 45</Munkanap>
+            <Tanszunet>0 30</Tanszunet>
+            <Szabadnap>0 30</Szabadnap>
+            <Munkaszunet>0 30</Munkaszunet>
         </ora> 
     </buszszam>
     <buszszam szam="19">
