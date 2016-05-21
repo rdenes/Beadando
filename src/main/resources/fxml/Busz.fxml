@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.beadando.BuszController">
+    <stylesheets>
+        <URL value="@/styles/busz.css" />
+    </stylesheets>
+   <children>
+      <Button fx:id="Vissza" layoutX="408.0" layoutY="599.0" mnemonicParsing="false" onMouseClicked="#VisszaClick" text="Vissza" />
+      <TableView fx:id="Menetrendt" layoutX="640.0" layoutY="70.0" prefHeight="200.0" prefWidth="490.0">
+        <columns>
+          <TableColumn fx:id="ora" prefWidth="75.0" text="Ora" />
+          <TableColumn fx:id="Munkanap" prefWidth="93.0" text="Munkanap" />
+            <TableColumn fx:id="Tanszunet" prefWidth="86.0" text="Tanszunet" />
+            <TableColumn fx:id="Szabadnap" prefWidth="112.0" text="Szabadnap" />
+            <TableColumn fx:id="Munkaszunet" prefWidth="116.0" text="Munaszunet" />
+        </columns>
+      </TableView>
+      <TableView fx:id="Megallok" layoutX="19.0" layoutY="70.0" prefHeight="384.0" prefWidth="450.0">
+        <columns>
+          <TableColumn fx:id="Megallo" prefWidth="264.0" text="Megallo" />
+          <TableColumn fx:id="Keses" prefWidth="105.0" text="Keses" />
+        </columns>
+      </TableView>
+      <Label fx:id="Label_B" layoutX="538.0" layoutY="14.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Megallok>
+    <buszszam szam="18">
+        <megallo ID="valami1" menetido="3">
+            Megallo1
+        </megallo>
+        <megallo ID="valami2" menetido="6">
+            Megallo2
+        </megallo>
+        <megallo ID="valami3" menetido="9">
+            Megallo3
+        </megallo>
+    </buszszam>
+    <buszszam szam="19">
+        <megallo ID="valami19" menetido="30">
+            Megallo10
+        </megallo>
+        <megallo ID="valami29" menetido="60">
+            Megallo20
+        </megallo>
+        <megallo ID="valami39" menetido="90">
+            Megallo30
+        </megallo>
+    </buszszam>
+        <buszszam szam="20">
+        <megallo ID="valami20" menetido="10">
+            Megallo21
+        </megallo>
+        <megallo ID="valami21" menetido="20">
+            Megallo22
+        </megallo>
+        <megallo ID="valami22" menetido="30">
+            Megallo23
+        </megallo>
+        <megallo ID="valami39" menetido="90">
+            Megallo30
+        </megallo>
+    </buszszam>
+        <buszszam szam="1096">
+        <megallo ID="valami1097" menetido="3">
+            Megallo1111
+        </megallo>
+        <megallo ID="valami1098" menetido="6">
+            Megallo1024
+        </megallo>
+        <megallo ID="valami1099" menetido="9">
+            Megallo1033
+        </megallo>
+    </buszszam>
+     
+</Megallok>
+
+

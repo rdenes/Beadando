@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Menetrend>
+    <buszszam szam="18">
+        <ora ora="0">
+            <Munkanap>55 57</Munkanap>
+            <Tanszunet>55 57</Tanszunet>
+            <Szabadnap>55 57</Szabadnap>
+            <Munkaszunet>55 57</Munkaszunet>
+        </ora>
+        <ora ora="1">
+            <Munkanap>1</Munkanap>
+            <Tanszunet>1</Tanszunet>
+            <Szabadnap>1</Szabadnap>
+            <Munkaszunet>1</Munkaszunet>
+        </ora>
+        <ora ora="2">
+            <Munkanap>1</Munkanap>
+            <Tanszunet>1</Tanszunet>
+            <Szabadnap>1</Szabadnap>
+            <Munkaszunet>1</Munkaszunet>
+        </ora> 
+    </buszszam>
+    <buszszam szam="19">
+        <ora ora="0">
+            <Munkanap>2</Munkanap>
+            <Tanszunet>2</Tanszunet>
+            <Szabadnap>2</Szabadnap>
+            <Munkaszunet>2</Munkaszunet>
+        </ora>
+        <ora ora="1">
+            <Munkanap>2</Munkanap>
+            <Tanszunet>2</Tanszunet>
+            <Szabadnap>2</Szabadnap>
+            <Munkaszunet>2</Munkaszunet>
+        </ora>
+        <ora ora="2">
+            <Munkanap>2</Munkanap>
+            <Tanszunet>2</Tanszunet>
+            <Szabadnap>2</Szabadnap>
+            <Munkaszunet>2</Munkaszunet>
+        </ora> 
+    </buszszam>
+    <buszszam szam="20">
+        <ora ora="0">
+            <Munkanap>3</Munkanap>
+            <Tanszunet>3</Tanszunet>
+            <Szabadnap>3</Szabadnap>
+            <Munkaszunet>3</Munkaszunet>
+        </ora>
+        <ora ora="1">
+            <Munkanap>3</Munkanap>
+            <Tanszunet>3</Tanszunet>
+            <Szabadnap>3</Szabadnap>
+            <Munkaszunet>3</Munkaszunet>
+        </ora>
+        <ora ora="2">
+            <Munkanap>3</Munkanap>
+            <Tanszunet>3</Tanszunet>
+            <Szabadnap>3</Szabadnap>
+            <Munkaszunet>3</Munkaszunet>
+        </ora> 
+    </buszszam>
+        <buszszam szam="1096">
+        <ora ora="0">
+            <Munkanap>55 57</Munkanap>
+            <Tanszunet>55 57</Tanszunet>
+            <Szabadnap>55 57</Szabadnap>
+            <Munkaszunet>55 57</Munkaszunet>
+        </ora>
+        <ora ora="1">
+            <Munkanap>1</Munkanap>
+            <Tanszunet>1</Tanszunet>
+            <Szabadnap>1</Szabadnap>
+            <Munkaszunet>1</Munkaszunet>
+        </ora>
+        <ora ora="2">
+            <Munkanap>1</Munkanap>
+            <Tanszunet>1</Tanszunet>
+            <Szabadnap>1</Szabadnap>
+            <Munkaszunet>1</Munkaszunet>
+        </ora> 
+    </buszszam>
+</Menetrend>
