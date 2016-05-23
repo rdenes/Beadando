@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.beadando.BuszHozzaadController">
+    <stylesheets>
+        <URL value="@/styles/buszhozzaad.css" />
+    </stylesheets>
+   <children>
+      <TextField fx:id="Buszsz_T" disable="true" layoutX="482.0" layoutY="14.0" />
+      <Label layoutX="333.0" layoutY="19.0" text="Buszszam" />
+      <TextField fx:id="ora_T" layoutX="14.0" layoutY="116.0" />
+      <TextField fx:id="Munkanap_T" layoutX="240.0" layoutY="116.0" />
+      <TextField fx:id="Tanszunet_T" layoutX="465.0" layoutY="116.0" />
+      <TextField fx:id="Szabadnap_T" layoutX="681.0" layoutY="116.0" />
+      <TextField fx:id="Munkaszunet_T" layoutX="908.0" layoutY="116.0" />
+      <Label layoutX="90.0" layoutY="72.0" text="ora" />
+      <Label layoutX="298.0" layoutY="72.0" text="Munkanap" />
+      <Label layoutX="525.0" layoutY="72.0" text="Tanszunet" />
+      <Label layoutX="738.0" layoutY="72.0" text="Szabadnap" />
+      <Label layoutX="954.0" layoutY="72.0" prefHeight="2.0" prefWidth="96.0" text="Munkaszunet" />
+      <Button fx:id="Hozzarak_B" disable="true" layoutX="535.0" layoutY="173.0" mnemonicParsing="false" onAction="#Hozzarak_E" text="Hozzarak" />
+
+      <Button fx:id="Hozzaad_B" disable="true" layoutX="543.0" layoutY="700.0" mnemonicParsing="false" onAction="#Hozzaad_E" text="Hozzaad" />
+      <Button fx:id="Szam_B" disable="true" layoutX="742.0" layoutY="14.0" mnemonicParsing="false" onAction="#Buszszam_E" text="Buszszam" />
+      <TableView fx:id="Menetrend_T" layoutX="165.0" layoutY="223.0" prefHeight="477.0" prefWidth="903.0">
+        <columns>
+          <TableColumn fx:id="ora_C" prefWidth="75.0" text="ora" />
+          <TableColumn fx:id="Munkanap_C" prefWidth="170.0" text="Munkanap" />
+            <TableColumn fx:id="Tanszunet_C" prefWidth="170.0" text="Tanszunet" />
+            <TableColumn fx:id="Szabadnap_C" prefWidth="213.0" text="Szabadnap" />
+            <TableColumn fx:id="Munkaszunet_C" prefWidth="220.0" text="Munkaszunet" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="ora_Cbox" layoutX="33.0" layoutY="40.0" onAction="#ora_Cbox_E" prefWidth="150.0" visible="false" />
+      <Button fx:id="Modosito_B" layoutX="69.0" layoutY="173.0" mnemonicParsing="false" onAction="#Modosito_E" text="Modosit" visible="false" />
+      <Button fx:id="Vissza_B" layoutX="465.0" layoutY="700.0" mnemonicParsing="false" onAction="#Vissza_E" text="Vissza" />
+   </children>
+</AnchorPane>

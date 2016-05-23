@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Menetrend>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Menetrend>
     <buszszam szam="18">
         <ora ora="0">
             <Munkanap>0 15 30 45</Munkanap>
@@ -128,4 +127,4 @@
             <Munkaszunet>1</Munkaszunet>
         </ora> 
     </buszszam>
-</Menetrend>
+<buszszam szam="24"><ora ora="0"><Munkanap>0</Munkanap><Tanszunet>0</Tanszunet><Szabadnap>0</Szabadnap><Munkaszunet>0</Munkaszunet></ora><ora ora="1"><Munkanap>0 15 30 56</Munkanap><Tanszunet>0 30</Tanszunet><Szabadnap>0 30</Szabadnap><Munkaszunet>0 30</Munkaszunet></ora><ora ora="2"><Munkanap>0 30 45</Munkanap><Tanszunet>0 30 45 </Tanszunet><Szabadnap>0 30 48</Szabadnap><Munkaszunet>0 30 35</Munkaszunet></ora></buszszam></Menetrend>

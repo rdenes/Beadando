@@ -23,6 +23,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerException;
 import org.xml.sax.SAXException;
 
 public class FXMLController implements Initializable {
@@ -41,7 +42,10 @@ public class FXMLController implements Initializable {
     private Button Megallok_But;
     @FXML
     private Button BuszKeres_B;
-    
+    @FXML
+    private Button Uj_B;
+    @FXML
+    private Button Modosit_B;
     @FXML
     private void handleButtonAction(ActionEvent event) {
         /*Stage stage;
@@ -147,5 +151,67 @@ public class FXMLController implements Initializable {
         } catch (IOException ex) {
             Logger.getLogger(FXMLController.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }    
+    }
+   @FXML
+   private void BuszHozzaad_E(ActionEvent event){
+        BuszController m = new BuszController();
+        try{
+            Stage stage;
+            Parent root;
+            
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Hozzaad.fxml"));
+            root = loader.load();
+            loader.<BuszHozzaadController>getController().initDataHozzaad();
+            
+
+            //root = FXMLLoader.load(getClass().getResource("/fxml/Busz.fxml"));
+            stage = (Stage) Uj_B.getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+   }
+   @FXML
+   private void Torol_E(ActionEvent event) throws ParserConfigurationException, SAXException, IOException, TransformerException{
+       MenetrendXMLDAO m = new MenetrendXMLDAO();
+       m.DeleteBusz(Integer.parseInt(Buszok_B.getValue()+""));
+       
+       Stage stage;
+       Parent root;
+            
+       FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Indit.fxml"));
+       root = loader.load();
+
+            //root = FXMLLoader.load(getClass().getResource("/fxml/Busz.fxml"));
+       stage = (Stage) Keres_B.getScene().getWindow();
+       Scene scene = new Scene(root);
+       stage.setScene(scene);
+       stage.show();
+       
+   }
+   @FXML
+   private void Modosit_E(ActionEvent event){
+        BuszController m = new BuszController();
+        MenetrendXMLDAO mxd = new MenetrendXMLDAO();
+        
+        try{
+            Stage stage;
+            Parent root;
+            
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Hozzaad.fxml"));
+            root = loader.load();
+            loader.<BuszHozzaadController>getController().initDataModosit(mxd.getBusz(Integer.parseInt(Buszok_B.getValue()+"")),Integer.parseInt(Buszok_B.getValue()+""));
+            
+
+            //root = FXMLLoader.load(getClass().getResource("/fxml/Busz.fxml"));
+            stage = (Stage) Uj_B.getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+   }
 }

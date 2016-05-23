@@ -87,7 +87,7 @@ public class MenetrendXMLDAOTest {
         List<Integer> expResult = new ArrayList<>();
         List<Integer> result = instance.getStart();
         expResult.add(1096);
-        assertEquals(expResult.get(expResult.size()-1), result.get(result.size()-1));
+        assertEquals(expResult.get(expResult.size()-1), result.get(3));
         // TODO review the generated test code and remove the default call to fail.
         //assertTrue(true);
     }
@@ -129,11 +129,48 @@ public class MenetrendXMLDAOTest {
         expResult.add(new Menetrend(1,"1","1","1","1"));
         expResult.add(new Menetrend(2,"1","1","1","1"));
         
+        
         assertEquals(expResult.get(0).getMunkanap(), result.get(0).getMunkanap());
         assertEquals(expResult.get(1).getMunkanap(), result.get(1).getMunkanap());
         assertEquals(expResult.get(2).getMunkanap(), result.get(2).getMunkanap());
         // TODO review the generated test code and remove the default call to fail.
-        assertTrue(true);
+        
     }
-    
+    @Test
+    public void InsertBusz() throws Exception{
+        MenetrendXMLDAO instance = new MenetrendXMLDAO();
+        List<Menetrend> ll = new ArrayList<>();
+        
+        int meret = instance.getStart().size();
+        ll.add(new Menetrend(0,"0","0","0","0"));
+        instance.InsertBusz(ll, 0);
+        int eredmeny = instance.getStart().size();
+        assertEquals(meret+1, eredmeny);
+        instance.DeleteBusz(0);
+    }
+    @Test
+    public void DeleteBusz() throws Exception{
+        MenetrendXMLDAO instance = new MenetrendXMLDAO();
+        List<Menetrend> ll = new ArrayList<>();
+        ll.add(new Menetrend(0,"0","0","0","0"));
+        instance.InsertBusz(ll, 0);
+        int meret = instance.getStart().size();
+        instance.DeleteBusz(0);
+        int eredmeny = instance.getStart().size();
+        assertEquals(meret-1, eredmeny);
+    }
+    @Test
+    public void ModositBusz() throws Exception{
+        MenetrendXMLDAO instance = new MenetrendXMLDAO();
+        Menetrend m = new Menetrend(2,"0","0","0","0");
+        instance.ModositBusz(1096, m);
+        List<Menetrend> ll = new ArrayList<>();
+        ll = instance.getBusz(1096);
+        assertEquals(m.getMunkanap(), ll.get(ll.size()-1).getMunkanap());
+        assertEquals(m.getTanszunet(), ll.get(ll.size()-1).getTanszunet());
+        assertEquals(m.getSzabadnap(), ll.get(ll.size()-1).getSzabadnap());
+        assertEquals(m.getMunkaszunet(), ll.get(ll.size()-1).getMunkaszunet());
+        m = new Menetrend(2,"1","1","1","1");
+        instance.ModositBusz(1096, m);
+    }
 }

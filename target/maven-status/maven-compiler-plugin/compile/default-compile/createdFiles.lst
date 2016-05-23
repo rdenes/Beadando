@@ -1,5 +1,6 @@
 Modell\Megallo.class
 com\mycompany\beadando\MainApp.class
+com\mycompany\beadando\BuszHozzaadController.class
 Modell\Busz.class
 Modell\MenetrendXMLDAO.class
 com\mycompany\beadando\FXMLController.class

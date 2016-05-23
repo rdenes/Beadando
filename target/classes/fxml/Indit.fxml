@@ -16,5 +16,9 @@
       <Label layoutX="404.0" layoutY="284.0" text="Megálló Kereső" />
       <Label layoutX="154.0" layoutY="284.0" text="Buszok" />
       <Button fx:id="BuszKeres_B" disable="true" layoutX="572.0" layoutY="393.0" mnemonicParsing="false" onAction="#Busz_Keres_E" text="Busz Keres" />
+      <Button fx:id="Uj_B" layoutX="617.0" layoutY="501.0" mnemonicParsing="false" onAction="#BuszHozzaad_E" text="Uj Busz" />
+      <Button fx:id="Torol_B" layoutX="136.0" layoutY="478.0" mnemonicParsing="false" onAction="#Torol_E" text="Torol" />
+      <Label layoutX="16.0" layoutY="522.0" text="Kitörli a ComboBoxban kiválsztott busz menetrendjét" />
+      <Button fx:id="Modosit_B" layoutX="126.0" layoutY="577.0" mnemonicParsing="false" onAction="#Modosit_E" text="Modosit" />
    </children>
 </AnchorPane>

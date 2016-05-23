@@ -17,6 +17,12 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Document;
 import java.io.IOException;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 import org.xml.sax.SAXException;
 
 /**
@@ -242,5 +248,109 @@ public class MenetrendXMLDAO {
             }
         }
         return ll;
+    }
+    
+    public void InsertBusz(List<Menetrend> ll,int buszszam) throws ParserConfigurationException, SAXException, IOException, TransformerConfigurationException, TransformerException{
+
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder dbuilder = factory.newDocumentBuilder();
+        Document doc = dbuilder.parse(new File("Menetrend.xml"));
+        
+        doc.getDocumentElement().normalize();
+        NodeList nList = doc.getElementsByTagName("buszszam");
+        Element last = (Element)nList.item(nList.getLength()-1);
+        Element busz = doc.createElement("buszszam");
+        busz.setAttribute("szam", buszszam+"");
+        Element root = doc.getDocumentElement();
+        System.out.println(root);
+        System.out.println(busz);
+        root.appendChild(busz);
+        for (int i = 0; i< ll.size();i++){
+            Menetrend m = ll.get(i);
+            Element ora = doc.createElement("ora");
+            ora.setAttribute("ora", m.getOra()+"");
+            
+            Element Munkanap = doc.createElement("Munkanap");
+            Element Tanszunet = doc.createElement("Tanszunet");
+            Element Szabadnap = doc.createElement("Szabadnap");
+            Element Munkaszunet = doc.createElement("Munkaszunet");
+            
+            
+            Munkanap.setTextContent(m.getMunkanap());
+            Tanszunet.setTextContent(m.getTanszunet());
+            Szabadnap.setTextContent(m.getSzabadnap());
+            Munkaszunet.setTextContent(m.getMunkaszunet());
+            
+            ora.appendChild(Munkanap);
+            ora.appendChild(Tanszunet);
+            ora.appendChild(Szabadnap);
+            ora.appendChild(Munkaszunet);
+            
+            busz.appendChild(ora);
+        }
+        
+        TransformerFactory tsFactory = TransformerFactory.newInstance();
+        Transformer tsformer = tsFactory.newTransformer();
+        DOMSource source = new DOMSource(doc);
+        StreamResult result = new StreamResult(new File("Menetrend.xml"));
+        tsformer.transform(source, result);
+    }
+    
+    public void DeleteBusz(int buszszam) throws ParserConfigurationException, SAXException, IOException, TransformerConfigurationException, TransformerException{
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder dbuilder = factory.newDocumentBuilder();
+        Document doc = dbuilder.parse(new File("Menetrend.xml"));
+        
+        doc.getDocumentElement().normalize();
+        NodeList nList = doc.getElementsByTagName("buszszam");
+        for (int i = 0; i<nList.getLength();i++){
+            Element e = (Element)nList.item(i);
+            if (Integer.parseInt(e.getAttribute("szam"))==buszszam){
+                e.getParentNode().removeChild(e);
+                break;
+            }
+        }
+        TransformerFactory tsFactory = TransformerFactory.newInstance();
+        Transformer tsformer = tsFactory.newTransformer();
+        DOMSource source = new DOMSource(doc);
+        StreamResult result = new StreamResult(new File("Menetrend.xml"));
+        tsformer.transform(source, result);
+    }
+    public void ModositBusz(int buszszam,Menetrend m) throws ParserConfigurationException, SAXException, IOException, TransformerConfigurationException, TransformerException{
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder dbuilder = factory.newDocumentBuilder();
+        Document doc = dbuilder.parse(new File("Menetrend.xml"));
+        
+        doc.getDocumentElement().normalize();
+        NodeList nList = doc.getElementsByTagName("buszszam");
+
+        for (int i = 0; i< nList.getLength();i++){
+            Element szam = (Element)nList.item(i);
+            if(Integer.parseInt(szam.getAttribute("szam"))==buszszam){
+                NodeList tmp = szam.getElementsByTagName("ora");
+                for (int j = 0;j<tmp.getLength();j++){
+                    Element o = (Element)tmp.item(j);
+                    if(Integer.parseInt(o.getAttribute("ora"))==m.getOra()){
+                        ((Element)o.getElementsByTagName("Munkanap").item(0)).setTextContent(m.getMunkanap());
+                        ((Element)o.getElementsByTagName("Tanszunet").item(0)).setTextContent(m.getTanszunet());
+                        ((Element)o.getElementsByTagName("Szabadnap").item(0)).setTextContent(m.getSzabadnap());
+                        ((Element)o.getElementsByTagName("Munkaszunet").item(0)).setTextContent(m.getMunkaszunet());
+                        break;
+                    }
+                }
+                break;
+            }
+            
+            
+            
+            
+            
+            
+        }
+        TransformerFactory tsFactory = TransformerFactory.newInstance();
+        Transformer tsformer = tsFactory.newTransformer();
+        DOMSource source = new DOMSource(doc);
+        StreamResult result = new StreamResult(new File("Menetrend.xml"));
+        tsformer.transform(source, result);
     }
 }
